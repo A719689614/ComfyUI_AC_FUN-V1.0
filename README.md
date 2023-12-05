@@ -2,6 +2,8 @@
 # 哔哩哔哩搜索：惠和设计-啊程，没错了，UP主本身是从事建筑设计/景观设计/室内设计，然后私底下对编程和Grasshopper可视化编程类的很感兴趣
 # 就一直在开发
 # 针对正式版本重新优化了代码和代码图标设置
+# 安装方法：
+# 下载rar压缩包解压到comfyui的custom node目录底下即可！其他代码文件可以删除无需安装！
 ![01](https://github.com/A719689614/ComfyUI/assets/142242136/9cb14113-b0f7-48ec-908a-c54c63211762)
 ![02](https://github.com/A719689614/ComfyUI/assets/142242136/319f7f00-b71d-4fd1-9a56-ee13de178405)
 ![03](https://github.com/A719689614/ComfyUI/assets/142242136/e5a4bf32-c40a-4b63-abad-229553928034)
