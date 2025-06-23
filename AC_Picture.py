@@ -61,7 +61,7 @@ class SaveImage_AC:
 
     OUTPUT_NODE = True
 
-    CATEGORY = "AC_FUN/🅿PictureTools"    
+    CATEGORY = "🌌AC_FUNV1.0/🅿PictureTools"    
     
     def save_images_ac(self, images, filename_prefix="啊程图集", prompt=None, extra_pnginfo=None):
         filename_prefix += self.prefix_append
@@ -123,7 +123,7 @@ class EmptyLatentImage_AC:
     RETURN_TYPES = ("LATENT",)
     FUNCTION = "generate_ac"
 
-    CATEGORY = "AC_FUN/🅿PictureTools"
+    CATEGORY = "🌌AC_FUNV1.0/🅿PictureTools"
 
     def generate_ac(self, width, height, amount=1,tips=None,print_to_screen= None):
         latent = torch.zeros([amount, 4, height // 8, width // 8])
@@ -143,7 +143,7 @@ class RepeatLatentBatch_AC:
     RETURN_TYPES = ("LATENT",)
     FUNCTION = "repeat_ac"
 
-    CATEGORY = "AC_FUN/🅿PictureTools"
+    CATEGORY = "🌌AC_FUNV1.0/🅿PictureTools"
 
     def repeat_ac(self, samples, amount,tips=None):
         s = samples.copy()
@@ -172,7 +172,7 @@ class LoadImage_AC:
                      },
                 }
 
-    CATEGORY = "AC_FUN/🅿PictureTools"
+    CATEGORY = "🌌AC_FUNV1.0/🅿PictureTools"
 
     RETURN_TYPES = ("IMAGE", "MASK")
     FUNCTION = "load_image_ac"
@@ -216,7 +216,7 @@ class Picturetool_AC:
     RETURN_NAMES = ("width", "height")
     FUNCTION = "picturetool_ac"
 
-    CATEGORY = "AC_FUN/🅿PictureTools"
+    CATEGORY = "🌌AC_FUNV1.0/🅿PictureTools"
 # TODO:
     def picturetool_ac(self,image: Tensor):
         # 获取当前工作目录
@@ -235,7 +235,7 @@ class ImageInvert_AC:
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "invert_ac"
 
-    CATEGORY = "AC_FUN/🅿PictureTools"
+    CATEGORY = "🌌AC_FUNV1.0/🅿PictureTools"
 
     def invert_ac(self, image,tips=None):
         invert = 1.0 - image
@@ -253,7 +253,7 @@ class ImageBatch_AC:
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "batch_ac"
 
-    CATEGORY = "AC_FUN/🅿PictureTools"
+    CATEGORY = "🌌AC_FUNV1.0/🅿PictureTools"
 
     def batch_ac(self, image1, image2,tips=None):
         if image1.shape[1:] != image2.shape[1:]:
@@ -272,7 +272,7 @@ class ImageBatch_MUT:
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "batch_mut"
 
-    CATEGORY = "AC_FUN/🅿PictureTools"
+    CATEGORY = "🌌AC_FUNV1.0/🅿PictureTools"
 
     def batch_mut(self, image1, image2,image3,image4,tips=None):
         if image1.shape[1:] and image3.shape[1:] and image4.shape[1:] != image2.shape[1:]:
@@ -292,7 +292,7 @@ class LoadImageMask_AC:
                      "channel": (s._color_channels, ), }
                 }
 
-    CATEGORY = "AC_FUN/🅿PictureTools"
+    CATEGORY = "🌌AC_FUNV1.0/🅿PictureTools"
 
     RETURN_TYPES = ("MASK",)
     FUNCTION = "load_image_ac"
@@ -344,7 +344,7 @@ class ImageScale_AC:
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "upscale_ac"
 
-    CATEGORY = "AC_FUN/🅿PictureTools"
+    CATEGORY = "🌌AC_FUNV1.0/🅿PictureTools"
 
     def upscale_ac(self, image, upscale_method, width, height, crop):
         samples = image.movedim(-1,1)
@@ -362,7 +362,7 @@ class ImageScaleB_AC:
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "upscale_ac"
 
-    CATEGORY = "AC_FUN/🅿PictureTools"
+    CATEGORY = "🌌AC_FUNV1.0/🅿PictureTools"
 
     def upscale_ac(self, image, upscale_method, scale_by):
         samples = image.movedim(-1,1)
@@ -398,7 +398,7 @@ class Mirrorpicture:
     # 返回节点命名
     # RETURN_NAMES = ()
     FUNCTION = "mirrorpicture"
-    CATEGORY = "AC_FUN/🅿PictureTools" 
+    CATEGORY = "🌌AC_FUNV1.0/🅿PictureTools" 
 
     def mirrorpicture(self, int, image_1, image_2,tips=None):
         one =int-image_1
@@ -426,7 +426,7 @@ class AC_Picture_Select:
     # 返回节点命名
     # RETURN_NAMES = ()
     FUNCTION = "ac_picture_Select"
-    CATEGORY = "AC_FUN/🅿PictureTools" 
+    CATEGORY = "🌌AC_FUNV1.0/🅿PictureTools" 
 
     def ac_picture_Select(self,mode,image_1,image_2,tips=None):
         if mode == "image_1":

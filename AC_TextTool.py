@@ -43,7 +43,7 @@ class CLIPLoader:
     RETURN_TYPES = ("CLIP",)
     FUNCTION = "load_clip"
 
-    CATEGORY = "AC_FUN/📗TextTool"
+    CATEGORY = "🌌AC_FUNV1.0/📗TextTool"
 
     def load_clip(self, clip_name):
         clip_path = folder_paths.get_full_path("clip", clip_name)
@@ -62,7 +62,7 @@ class AC_Notebook:
     #RETURN_NAMES = ("image_output_name",)
     FUNCTION = "notebook"
     #OUTPUT_NODE = False
-    CATEGORY = "AC_FUN/📗TextTool"
+    CATEGORY = "🌌AC_FUNV1.0/📗TextTool"
     def notebook(self,text):
         tokens = str(text)
         return (tokens,)
@@ -76,7 +76,7 @@ class CLIPTextEncode_AC:
     RETURN_TYPES = ("CONDITIONING",)
     FUNCTION = "encode_ac"
 
-    CATEGORY = "AC_FUN/📗TextTool"
+    CATEGORY = "🌌AC_FUNV1.0/📗TextTool"
 
     def encode_ac(self, clip, text):
         tokens = clip.tokenize(text)
@@ -95,7 +95,7 @@ class Text_AC:
     RETURN_TYPES = ("CONDITIONING","positve","negative",)
     FUNCTION = "text_ac"
 
-    CATEGORY = "AC_FUN/📗TextTool"
+    CATEGORY = "🌌AC_FUNV1.0/📗TextTool"
 
     def text_ac(self,tips=None,):
         file = open('D/:text.text', 'r',encoding='UTF-8')
@@ -114,7 +114,7 @@ class CLIPSetLastLayer_AC:
     RETURN_TYPES = ("CLIP",)
     FUNCTION = "set_last_layer_ac"
 
-    CATEGORY = "AC_FUN/📗TextTool"
+    CATEGORY = "🌌AC_FUNV1.0/📗TextTool"
 
     def set_last_layer_ac(self, clip, stop_at_clip_layer,tips=None):
         clip = clip.clone()

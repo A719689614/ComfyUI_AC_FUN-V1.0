@@ -102,7 +102,7 @@ class KSamplerAC:
     RETURN_TYPES = ("LATENT",)
     FUNCTION = "SampleAC"
 
-    CATEGORY = "AC_FUN/♑SampleAC"
+    CATEGORY = "🌌AC_FUNV1.0/♑SampleAC"
 
     def SampleAC(self, model, add_noise, seed, steps, cfg, sampler_name, scheduler,
             positive, negative, latent_image, start_at_step, end_at_step, return_with_leftover_noise, denoise=1.0):
@@ -124,7 +124,7 @@ class CheckpointLoaderAC:
     RETURN_TYPES = ("MODEL","CLIP", "VAE")
     FUNCTION = "load_checkpointAC"
 
-    CATEGORY = "AC_FUN/♑SampleAC"
+    CATEGORY = "🌌AC_FUNV1.0/♑SampleAC"
 
     def load_checkpointAC(self, ckpt_name, output_vae=True, output_clip=True,):
         ckpt_path = fp.get_full_path("checkpoints", ckpt_name)
@@ -141,7 +141,7 @@ class VAEEncode_AC:
     RETURN_TYPES = ("LATENT",)
     FUNCTION = "encode_ac"
 
-    CATEGORY = "AC_FUN/♑SampleAC"
+    CATEGORY = "🌌AC_FUNV1.0/♑SampleAC"
 
     @staticmethod
     def vae_encode_crop_pixels_ac(pixels):
@@ -166,7 +166,7 @@ class VAELoader_AC:
     RETURN_TYPES = ("VAE",)
     FUNCTION = "load_vae_ac"
 
-    CATEGORY = "AC_FUN/♑SampleAC"
+    CATEGORY = "🌌AC_FUNV1.0/♑SampleAC"
 
     #TODO: scale factor?
     def load_vae_ac(self, vae_name):
@@ -182,7 +182,7 @@ class VAEDecode_AC:
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "decode_ac"
 
-    CATEGORY = "AC_FUN/♑SampleAC"
+    CATEGORY = "🌌AC_FUNV1.0/♑SampleAC"
 
     def decode_ac(self, vae, samples):
         return (vae.decode(samples["samples"]), )
@@ -194,7 +194,7 @@ class VAEEncodeForInpaint_ac:
     RETURN_TYPES = ("LATENT",)
     FUNCTION = "encode_ac"
 
-    CATEGORY = "AC_FUN/♑SampleAC"
+    CATEGORY = "🌌AC_FUNV1.0/♑SampleAC"
 
     def encode_ac(self, vae, pixels, mask, 羽化值=5):
         x = (pixels.shape[1] // 8) * 8
@@ -241,7 +241,7 @@ class DiffusersLoader_AC:
     RETURN_TYPES = ("MODEL", "CLIP", "VAE")
     FUNCTION = "load_checkpoint_ac"
 
-    CATEGORY = "AC_FUN/♑SampleAC"
+    CATEGORY = "🌌AC_FUNV1.0/♑SampleAC"
 
     def load_checkpoint_ac(self, model_path, output_vae=True, output_clip=True):
         for search_path in fp.get_folder_paths("diffusers"):
@@ -272,7 +272,7 @@ class LoraLoader_AC:
     RETURN_TYPES = ("MODEL", "CLIP")
     FUNCTION = "load_lora_ac"
 
-    CATEGORY = "AC_FUN/♑SampleAC"
+    CATEGORY = "🌌AC_FUNV1.0/♑SampleAC"
 
     def load_lora_ac(self, model, clip, lora_name, strength_model, strength_clip,tips=None):
         if strength_model == 0 and strength_clip == 0:
@@ -304,7 +304,7 @@ class CLIPVisionLoader_AC:
     RETURN_TYPES = ("CLIP_VISION",)
     FUNCTION = "load_clip_ac"
 
-    CATEGORY = "AC_FUN/♑SampleAC"
+    CATEGORY = "🌌AC_FUNV1.0/♑SampleAC"
 
     def load_clip_ac(self, clip_name):
         clip_path = fp.get_full_path("clip_vision", clip_name)
@@ -321,7 +321,7 @@ class CLIPVisionEncode_AC:
     RETURN_TYPES = ("CLIP_VISION_OUTPUT",)
     FUNCTION = "encode_ac"
 
-    CATEGORY = "AC_FUN/♑SampleAC"
+    CATEGORY = "🌌AC_FUNV1.0/♑SampleAC"
 
     def encode_ac(self, clip_vision, image):
         output = clip_vision.encode_image(image)
@@ -338,7 +338,7 @@ class LoadLatent_AC:
                 "tips": ("STRING", {"multiline": False,
                               "default":"加载一个潜空间"}), }
 
-    CATEGORY = "AC_FUN/♑SampleAC"
+    CATEGORY = "🌌AC_FUNV1.0/♑SampleAC"
 
     RETURN_TYPES = ("LATENT", )
     FUNCTION = "load_ac"
@@ -365,7 +365,7 @@ class LatentFlip_AC:
     RETURN_TYPES = ("LATENT",)
     FUNCTION = "flip_ac"
 
-    CATEGORY = "AC_FUN/♑SampleAC"
+    CATEGORY = "🌌AC_FUNV1.0/♑SampleAC"
 
     def flip_ac(self, samples, flip_method,tips=None):
         s = samples.copy()
@@ -385,7 +385,7 @@ class StyleModelLoader_AC:
     RETURN_TYPES = ("STYLE_MODEL",)
     FUNCTION = "load_style_model_ac"
 
-    CATEGORY = "AC_FUN/♑SampleAC"
+    CATEGORY = "🌌AC_FUNV1.0/♑SampleAC"
 
     def load_style_model_ac(self, style_model_name):
         style_model_path = fp.get_full_path("style_models", style_model_name)
@@ -403,7 +403,7 @@ class StyleModelApply_AC:
     RETURN_TYPES = ("CONDITIONING",)
     FUNCTION = "apply_stylemodel_ac"
 
-    CATEGORY = "AC_FUN/♑SampleAC"
+    CATEGORY = "🌌AC_FUNV1.0/♑SampleAC"
 
     def apply_stylemodel_ac(self, clip_vision_output, style_model, conditioning):
         cond = style_model.get_cond(clip_vision_output).flatten(start_dim=0, end_dim=1).unsqueeze(dim=0)
@@ -426,7 +426,7 @@ class LatentUpscale_AC:
     RETURN_TYPES = ("LATENT",)
     FUNCTION = "upscale_ac"
 
-    CATEGORY = "AC_FUN/♑SampleAC"
+    CATEGORY = "🌌AC_FUNV1.0/♑SampleAC"
 
     def upscale_ac(self, samples, upscale_method, width, height, crop):
         s = samples.copy()
@@ -444,7 +444,7 @@ class LatentUpscaleBy_AC:
     RETURN_TYPES = ("LATENT",)
     FUNCTION = "upscale_ac"
 
-    CATEGORY = "AC_FUN/♑SampleAC"
+    CATEGORY = "🌌AC_FUNV1.0/♑SampleAC"
 
     def upscale_ac(self, samples, upscale_method, scale_by):
         s = samples.copy()
@@ -463,7 +463,7 @@ class LatentRotate_AC:
     RETURN_TYPES = ("LATENT",)
     FUNCTION = "rotate_ac"
 
-    CATEGORY = "AC_FUN/♑SampleAC"
+    CATEGORY = "🌌AC_FUNV1.0/♑SampleAC"
 
     def rotate(self, samples, rotation):
         s = samples.copy()
@@ -487,7 +487,7 @@ class LatentFlip_AC:
     RETURN_TYPES = ("LATENT",)
     FUNCTION = "flip_ac"
 
-    CATEGORY = "AC_FUN/♑SampleAC"
+    CATEGORY = "🌌AC_FUNV1.0/♑SampleAC"
 
     def flip_ac(self, samples, flip_method):
         s = samples.copy()
@@ -514,7 +514,7 @@ class LatentComposite_AC:
     RETURN_TYPES = ("LATENT",)
     FUNCTION = "composite_ac"
 
-    CATEGORY = "AC_FUN/♑SampleAC"
+    CATEGORY = "🌌AC_FUNV1.0/♑SampleAC"
 
     def composite(self, samples_to, samples_from, x, y, composite_method="normal", feather=0,tips=None):
         x =  x // 8
@@ -565,7 +565,7 @@ class LatentBlend_AC:
     RETURN_TYPES = ("LATENT",)
     FUNCTION = "blend_ac"
 
-    CATEGORY = "AC_FUN/♑SampleAC"
+    CATEGORY = "🌌AC_FUNV1.0/♑SampleAC"
 
     def blend_ac(self, samples1, samples2, blend_factor:float, blend_mode: str="normal",tips=None):
 

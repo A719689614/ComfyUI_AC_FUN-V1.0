@@ -26,7 +26,7 @@ class X_AC:
     #RETURN_NAMES = ("image_output_name",)
     FUNCTION = "x_ac"
     #OUTPUT_NODE = False
-    CATEGORY = "AC_FUN/🔯MathTool"
+    CATEGORY = "🌌AC_FUNV1.0/🔯MathTool"
 
     def x_ac(self,X,tips=None):
         return(str(X), X)
@@ -54,7 +54,7 @@ class Y_AC:
     #RETURN_NAMES = ("image_output_name",)
     FUNCTION = "y_ac"
     #OUTPUT_NODE = False
-    CATEGORY = "AC_FUN/🔯MathTool"
+    CATEGORY = "🌌AC_FUNV1.0/🔯MathTool"
 
     def y_ac(self,Y,tips=None):
         return(str(Y), Y)
@@ -69,14 +69,14 @@ class Sum_AC:
     def INPUT_TYPES(s):
         return {
             "required": {
-                "int_1": ("FLOAT", {
+                "int_1": ("INT", {
                     "default": 0, 
                     "min": 0, #Minimum value
                     "max": MAX_RESOLUTION, #Maximum value
                     "step": 1, #Slider's step
                     "display": "number" # Cosmetic only: display as "number" or "slider"
                 }),
-                "int_2": ("FLOAT", {
+                "int_2": ("INT", {
                     "default": 0, 
                     "min": 0, #Minimum value
                     "max": MAX_RESOLUTION, #Maximum value
@@ -90,7 +90,7 @@ class Sum_AC:
     #RETURN_NAMES = ("image_output_name",)
     FUNCTION = "mathematical"
     #OUTPUT_NODE = False
-    CATEGORY = "AC_FUN/🔯MathTool"
+    CATEGORY = "🌌AC_FUNV1.0/🔯MathTool"
 
     def mathematical(self,int_1,int_2 ):
         x = int_1 + int_2
@@ -108,14 +108,14 @@ class Sub_AC:
     def INPUT_TYPES(s):
         return {
             "required": {
-                "int_1": ("FLOAT", {
+                "int_1": ("INT", {
                     "default": 0, 
                     "min": 0, #Minimum value
                     "max": MAX_RESOLUTION, #Maximum value
                     "step": 1, #Slider's step
                     "display": "number" # Cosmetic only: display as "number" or "slider"
                 }),
-                "int_2": ("FLOAT", {
+                "int_2": ("INT", {
                     "default": 0, 
                     "min": 0, #Minimum value
                     "max": MAX_RESOLUTION, #Maximum value
@@ -129,7 +129,7 @@ class Sub_AC:
     #RETURN_NAMES = ("image_output_name",)
     FUNCTION = "sub"
     #OUTPUT_NODE = False
-    CATEGORY = "AC_FUN/🔯MathTool"
+    CATEGORY = "🌌AC_FUNV1.0/🔯MathTool"
 
     def sub(self,int_1,int_2 ):
         x = int_1 - int_2
@@ -145,14 +145,14 @@ class Mul_AC:
     def INPUT_TYPES(s):
         return {
             "required": {
-                "int_1": ("FLOAT", {
+                "int_1": ("INT", {
                     "default": 0, 
                     "min": 0, #Minimum value
                     "max": MAX_RESOLUTION, #Maximum value
                     "step": 1, #Slider's step
                     "display": "number" # Cosmetic only: display as "number" or "slider"
                 }),
-                "int_2": ("FLOAT", {
+                "int_2": ("INT", {
                     "default": 0, 
                     "min": 0, #Minimum value
                     "max": MAX_RESOLUTION, #Maximum value
@@ -166,7 +166,7 @@ class Mul_AC:
     #RETURN_NAMES = ("image_output_name",)
     FUNCTION = "mul"
     #OUTPUT_NODE = False
-    CATEGORY = "AC_FUN/🔯MathTool"
+    CATEGORY = "🌌AC_FUNV1.0/🔯MathTool"
 
     def mul(self,int_1,int_2 ):
         x = int_1*int_2
@@ -181,14 +181,14 @@ class Div_AC:
     def INPUT_TYPES(s):
         return {
             "required": {
-                "int_1": ("FLOAT", {
+                "int_1": ("INT", {
                     "default": 0, 
                     "min": 0, #Minimum value
                     "max": MAX_RESOLUTION, #Maximum value
                     "step": 1, #Slider's step
                     "display": "number" # Cosmetic only: display as "number" or "slider"
                 }),
-                "int_2": ("FLOAT", {
+                "int_2": ("INT", {
                     "default": 0, 
                     "min": 0, #Minimum value
                     "max": MAX_RESOLUTION, #Maximum value
@@ -206,7 +206,7 @@ class Div_AC:
     #RETURN_NAMES = ("image_output_name",)
     FUNCTION = "div"
     #OUTPUT_NODE = False
-    CATEGORY = "AC_FUN/🔯MathTool"
+    CATEGORY = "🌌AC_FUNV1.0/🔯MathTool"
 
     def div(self,int_1,int_2,tips=None):
         if int_2 != 0:
@@ -223,7 +223,7 @@ class Square_AC:
     def INPUT_TYPES(s):
         return {
             "required": {
-                "x": ("FLOAT", {
+                "x": ("INT", {
                     "default": 0, 
                     "min": 0, #Minimum value
                     "max": MAX_RESOLUTION, #Maximum value
@@ -236,7 +236,7 @@ class Square_AC:
     #RETURN_NAMES = ("image_output_name",)
     FUNCTION = "square_ac"
     #OUTPUT_NODE = False
-    CATEGORY = "AC_FUN/🔯MathTool"
+    CATEGORY = "🌌AC_FUNV1.0/🔯MathTool"
 
     def square_ac(self,x):
         y = x**2
@@ -266,7 +266,7 @@ class Translate_Float_AC:
     #RETURN_NAMES = ("image_output_name",)
     FUNCTION = "translate_digits_ac"
     #OUTPUT_NODE = False
-    CATEGORY = "AC_FUN/🔯MathTool"
+    CATEGORY = "🌌AC_FUNV1.0/🔯MathTool"
 
     def translate_digits_ac(self,float,tips=None):
         y  = int(float)
@@ -296,7 +296,7 @@ class Translate_INT_AC:
     #RETURN_NAMES = ("image_output_name",)
     FUNCTION = "translate_int_ac"
     #OUTPUT_NODE = False
-    CATEGORY = "AC_FUN/🔯MathTool"
+    CATEGORY = "🌌AC_FUNV1.0/🔯MathTool"
 
     def translate_int_ac(self,int,tips=None):
         y  = float(int)
@@ -321,7 +321,7 @@ class Translate_STR_AC:
     #RETURN_NAMES = ("image_output_name",)
     FUNCTION = "translate_str_ac"
     #OUTPUT_NODE = False
-    CATEGORY = "AC_FUN/🔯MathTool"
+    CATEGORY = "🌌AC_FUNV1.0/🔯MathTool"
 
     def translate_str_ac(self,float=None,tips=None):
         x = str(float)
@@ -329,33 +329,26 @@ class Translate_STR_AC:
 
  # 查看结果
 class ShowText_AC:
+    def __init__(self):
+        pass
+
     @classmethod
     def INPUT_TYPES(s):
         return {
             "required": {
                 "text": ("STRING", {"forceInput": True}),
-            },
-            "hidden": {
-                "unique_id": "UNIQUE_ID",
-                "extra_pnginfo": "EXTRA_PNGINFO",
-            },
-        }
+            }
 
-    INPUT_IS_LIST = True
+        }
     RETURN_TYPES = ("STRING",)
     FUNCTION = "notify_ac"
     OUTPUT_NODE = True
     OUTPUT_IS_LIST = (True,)
 
-    CATEGORY = "AC_FUN/🔯MathTool"
+    CATEGORY = "🌌AC_FUNV1.0/🔯MathTool"
 
-    def notify_ac(self, text, unique_id = None, extra_pnginfo=None):
-        if unique_id and extra_pnginfo and "acwork" in extra_pnginfo[0]:
-            acwork = extra_pnginfo[0]["acwork"]
-            node = next((x for x in acwork["nodes"] if str(x["id"]) == unique_id[0]), None)
-            if node:
-                node["widgets_values"] = [text]
-        return {"ui": {"text": text}, "result": (text,)}
+    def notify_ac(self, text):
+        return {"ui": {"text": [text,]}, "result": (text,)}
 
 # 累加数学运算
 class Mathaddtion:
@@ -373,7 +366,7 @@ class Mathaddtion:
     RETURN_TYPES = ("STRING","INT")
     FUNCTION = "mathaddtion"
     OUTPUT_NODE = True
-    CATEGORY = "AC_FUN/🔯MathTool"
+    CATEGORY = "🌌AC_FUNV1.0/🔯MathTool"
 
     def mathaddtion(self, int_1,int_2,tips=None):
         x = 0
@@ -405,7 +398,7 @@ class Series_AC:
     RETURN_TYPES = ("STRING","INT")
     FUNCTION = "series"
     OUTPUT_NODE = True
-    CATEGORY = "AC_FUN/🔯MathTool"
+    CATEGORY = "🌌AC_FUNV1.0/🔯MathTool"
 
     def series(self, start, step, count, tips=None):
         y = 0
@@ -433,7 +426,7 @@ class AC_randomize:
     # 返回节点命名
     # RETURN_NAMES = ()
     FUNCTION = "ac_randomize"
-    CATEGORY = "AC_FUN/🔯MathTool" 
+    CATEGORY = "🌌AC_FUNV1.0/🔯MathTool" 
 
     def ac_randomize(self,int,tips=None):
             import random
@@ -459,7 +452,7 @@ class AC_ABS:
     # RETURN_NAMES = ()
 
     FUNCTION = "ac_abs"
-    CATEGORY = "AC_FUN/🔯MathTool" 
+    CATEGORY = "🌌AC_FUNV1.0/🔯MathTool" 
 
     def ac_abs(self,int,tips=None):
             int = abs(int)
@@ -484,7 +477,7 @@ class AC_Sqrt:
     # RETURN_NAMES = ()
 
     FUNCTION = "ac_sqrt"
-    CATEGORY = "AC_FUN/🔯MathTool" 
+    CATEGORY = "🌌AC_FUNV1.0/🔯MathTool" 
 
     def ac_sqrt(self,int,tips=None):
             int = math.sqrt(int)
@@ -509,7 +502,7 @@ class AC_Pow:
     # RETURN_NAMES = ()
 
     FUNCTION = "ac_pow"
-    CATEGORY = "AC_FUN/🔯MathTool" 
+    CATEGORY = "🌌AC_FUNV1.0/🔯MathTool" 
 
     def ac_pow(self,int,tips=None):
             num = int **(1/3)

@@ -44,7 +44,7 @@ class ControlNetLoader_AC:
     RETURN_TYPES = ("CONTROL_NET",)
     FUNCTION = "load_controlnet_ac"
 
-    CATEGORY = "AC_FUN/♐ControlNet"
+    CATEGORY = "🌌AC_FUNV1.0/♐ControlNet"
 
     def load_controlnet_ac(self, control_net_name, tips=None):
         controlnet_path = folder_paths.get_full_path("controlnet", control_net_name)
@@ -62,7 +62,7 @@ class ControlNetSimple_AC:
     RETURN_TYPES = ("CONDITIONING",)
     FUNCTION = "apply_controlnet_ac"
 
-    CATEGORY = "AC_FUN/♐ControlNet"
+    CATEGORY = "🌌AC_FUNV1.0/♐ControlNet"
 
     def apply_controlnet_ac(self, conditioning, control_net, image, strength):
         if strength == 0:
@@ -89,7 +89,7 @@ class UNETLoader_AC:
     RETURN_TYPES = ("MODEL",)
     FUNCTION = "load_unet_ac"
 
-    CATEGORY = "AC_FUN/♐ControlNet"
+    CATEGORY = "🌌AC_FUNV1.0/♐ControlNet"
 
     def load_unet_ac(self, unet_name):
         unet_path = folder_paths.get_full_path("unet", unet_name)
@@ -114,7 +114,7 @@ class ControlNetApplyAdvanced_AC:
     
     FUNCTION = "apply_controlnet_ac"
 
-    CATEGORY = "AC_FUN/♐ControlNet"
+    CATEGORY = "🌌AC_FUNV1.0/♐ControlNet"
 
     def apply_controlnet_ac(self, positive, negative, control_net, image, strength, start_point, end_point):
         if strength == 0:
@@ -162,7 +162,7 @@ class ConditioningSetArea_AC:
     RETURN_TYPES = ("CONDITIONING",)
     FUNCTION = "append_ac"
 
-    CATEGORY = "AC_FUN/♐ControlNet"
+    CATEGORY = "🌌AC_FUNV1.0/♐ControlNet"
 
     def append_ac(self, conditioning, width, height, x_aera, y_aera, strength,tips=None):
         c = []
@@ -185,7 +185,7 @@ class ConditioningCombine_AC:
     RETURN_TYPES = ("CONDITIONING",)
     FUNCTION = "combine_ac"
 
-    CATEGORY = "AC_FUN/♐ControlNet"
+    CATEGORY = "🌌AC_FUNV1.0/♐ControlNet"
 
     def combine(self, conditioning_1, conditioning_2,conditioning_3,conditioning_4):
         return (conditioning_1 + conditioning_2 + conditioning_3 + conditioning_4  )
@@ -202,7 +202,7 @@ class ConditioningAverage_AC:
     RETURN_TYPES = ("CONDITIONING",)
     FUNCTION = "addWeighted_ac"
 
-    CATEGORY = "AC_FUN/♐ControlNet"
+    CATEGORY = "🌌AC_FUNV1.0/♐ControlNet"
 
     def addWeighted_ac(self, conditioning_to, conditioning_from, conditioning_to_strength,tips=None):
         out = []
@@ -244,7 +244,7 @@ class ConditioningConcat_AC:
     RETURN_TYPES = ("CONDITIONING",)
     FUNCTION = "concat_ac"
 
-    CATEGORY = "AC_FUN/♐ControlNet"
+    CATEGORY = "🌌AC_FUNV1.0/♐ControlNet"
 
     def concat_ac(self, conditioning_to, conditioning_from,tips=None):
         out = []
@@ -276,7 +276,7 @@ class ConditioningSetMask_AC:
     RETURN_TYPES = ("CONDITIONING",)
     FUNCTION = "append_ac"
 
-    CATEGORY = "AC_FUN/♐ControlNet"
+    CATEGORY = "🌌AC_FUNV1.0/♐ControlNet"
 
     def append_ac(self, conditioning, mask, set_cond_area, strength,tips=None):
         c = []
@@ -307,7 +307,7 @@ class ConditioningSetTimestepRange_AC:
     RETURN_TYPES = ("CONDITIONING",)
     FUNCTION = "set_range_ac"
 
-    CATEGORY = "AC_FUN/♐ControlNet"
+    CATEGORY = "🌌AC_FUNV1.0/♐ControlNet"
 
     def set_range_ac(self, conditioning, start, end,tips=None):
         c = []
