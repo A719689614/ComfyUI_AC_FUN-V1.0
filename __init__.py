@@ -63,9 +63,5 @@ NODE_CLASS_MAPPINGS = {
 
 }
 
-# A dictionary that contains the friendly/humanly readable titles for the nodes
-NODE_DISPLAY_NAME_MAPPINGS = {
-
-}
-
-__all__ = ["NODE_CLASS_MAPPINGS", "NODE_DISPLAY_NAME_MAPPINGS"]
+WEB_DIRECTORY = "./javascript"
+__all__ = ["NODE_CLASS_MAPPINGS", "WEB_DIRECTORY"]
