@@ -1,0 +1,15 @@
+[project]
+name = "ComfyUI_AC_FUN-V1.0"
+description = "For ComfyUI Math Tools"
+version = "1.0.0"
+license = {file = "LICENSE"}
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/A719689614/ComfyUI_AC_FUN-V1.0"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = "acheng"
+DisplayName = "ComfyUI_AC_FUN-V1.0"
+Icon = "https://avatars.githubusercontent.com/u/142242136?v=4"
