@@ -1,4 +1,5 @@
 # ===============================================================
+from simpleeval import simple_eval
 class AC_FUN_Expression:
     @classmethod
     def INPUT_TYPES(s):
@@ -20,5 +21,5 @@ class AC_FUN_Expression:
     CATEGORY = "🌌AC_FUNV1.0/🔯MathTool" 
 
     def math_expression(self,Expression,tips=None):
-        result = eval(Expression)
+        result = simple_eval(Expression)
         return (result,)   
