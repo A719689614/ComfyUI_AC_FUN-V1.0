@@ -28,6 +28,7 @@ NODE_CLASS_MAPPINGS = {
     "Math_平方根": AC_Sqrt,
     "Math_立方根": AC_Pow,
     "Math_数学表达式":AC_FUN_Expression,
+    "随机数":AC_FUN_RandomInt,
     # 啊程的控制网格
     "Control_控制器加载": ControlNetLoader_AC,
     "Control_高级控制网格": ControlNetApplyAdvanced_AC,

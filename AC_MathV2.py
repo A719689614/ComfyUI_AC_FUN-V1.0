@@ -1,5 +1,6 @@
 # ===============================================================
 from simpleeval import simple_eval
+import random
 class AC_FUN_Expression:
     @classmethod
     def INPUT_TYPES(s):
@@ -22,4 +23,21 @@ class AC_FUN_Expression:
 
     def math_expression(self,Expression,tips=None):
         result = simple_eval(Expression)
+        return (result,)   
+class AC_FUN_RandomInt:
+    @classmethod
+    def INPUT_TYPES(s):
+        return {
+            "required": {
+        }}
+    # 返回结果类型
+    RETURN_TYPES = ('INT',)
+    
+    # 返回节点命名
+    RETURN_NAMES = ('INT',)
+    FUNCTION = "math_expression" 
+    CATEGORY = "🌌AC_FUNV1.0/🔯MathTool" 
+
+    def back_randomint(self):
+        result = random.randint(1000000000, 9999999999)
         return (result,)   
